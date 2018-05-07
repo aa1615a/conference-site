@@ -1,0 +1,564 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/* 
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;		
+}
+*/
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+/* NAV BAR */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #93e5c7;
+}
+
+.navbar li {
+    float: right;
+    border-left:1px solid white;
+}
+
+.navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+#main{
+	float: left;
+    border-right:1px solid white;
+}
+
+.navbar li a:hover{
+    background-color: #c7eadd;
+}
+
+/*CONTENT */
+body {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #222;
+}
+
+h1 {
+	line-height: 1em;
+	}
+
+p {
+	text-align: left;
+	}
+
+a {
+	text-decoration: none;
+	color: #53d1a3;
+}
+
+a:hover {
+	color: #93e5c7;
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area. 
+	If you have more than one container, you are probably doing
+	something wrong. 	
+*/
+
+/* REGISTRATION */
+h1.page-title {
+	text-align: center;
+	grid-column: 1/-1;
+	font-size: 50px;
+}
+
+i.register {
+	font-size: 13px;
+}
+
+h3.address {
+	margin-bottom: 5px;
+}
+
+.r-container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1000px;
+	padding: .5em 2em .5em 2em;
+	border: 5px solid #93e5c7;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2em;
+	grid-row-gap: 2em;
+}
+
+.ga {
+	grid-column: 1/2;
+	background-color: #93e5c7;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.early-bird {
+	grid-column: 2/3;
+	background-color: #93e5c7;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.student {
+	grid-column: 3/4;
+	background-color: #93e5c7;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.r-button {
+	text-align: center;
+	grid-column: 1/-1;
+}
+
+.map {
+	grid-column: 1/3;
+}
+
+.address {
+	grid-column: 3/4;
+}
+
+
+/* SCHEDULE */
+
+@media (min-width: 490px) {
+.s-container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1000px;
+	padding: .5em 2em 2em 2em;
+	border: 5px solid #93e5c7;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(9, 1fr);
+}
+
+/*
+.column-color {
+	background-color: #c7eadd;
+}
+*/
+
+#s-column1 {
+	grid-column: 1/2;
+}
+
+#s-column2 {
+	grid-column: 2/3;
+}
+
+#s-column3 {
+	grid-column: 3/4;
+}
+
+#s-column4 {
+	grid-column: 4/5;
+}
+
+.table-head {
+	text-align: center;
+}
+
+h2.table-head {
+	margin-bottom: 5px;
+}
+
+
+.slot9-10 {
+	grid-row: 3/4;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+p.event1 {
+	grid-row: 3/4;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+
+.slot10-11 {
+	grid-row: 4/5;
+	padding: 15px;
+	margin: 0px;
+}
+p.event2 {
+	grid-row: 4/5;
+	padding: 15px;
+	margin: 0px;
+}
+
+.slot11-1230 {
+	grid-row: 5/6;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+p.event3 {
+	grid-row: 5/6;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+
+.slot1230-2 {
+	grid-row: 6/7;
+	padding: 15px;
+	margin: 0px;
+}
+p.event4 {
+	grid-row: 6/7;
+	padding: 15px;
+	margin: 0px;
+}
+
+.slot2-3 {
+	grid-row: 7/8;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+p.event5 {
+	grid-row: 7/8;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+
+.slot3-5 {
+	grid-row: 8/9;
+	padding: 15px;
+	margin: 0px;
+}
+p.event6 {
+	grid-row: 8/9;
+	padding: 15px;
+	margin: 0px;
+}
+
+.slot5-6 {
+	grid-row: 9/10;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+p.event7 {
+	grid-row: 9/10;
+	background-color: #c7eadd;
+	padding: 15px;
+	margin: 0px;
+}
+
+}
+/* wider screens */
+.banner {
+	background-image: url("../img/connector-cover.jpg");
+	background-position: fixed;
+	background-size: cover;
+	min-height: 400px;
+}
+.container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+	padding: .5em;
+	border: 5px solid #93e5c7;
+	text-align: center;
+}
+
+.scroll {
+    /* The image used */
+    background-image: url("../img/vr-headset1.jpg");
+
+    /* Set a specific height */
+    height: 350px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* smaller screens */
+@media (max-width: 490px) {
+
+.scroll {
+    /* The image used */
+    background-image: url("../img/vr-cover1.jpg");
+
+    /* Set a specific height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 300px 450px;
+}
+
+h1.page-title {
+	text-align: center;
+	grid-column: 1/-1;
+	font-size: 45px;
+}
+.r-container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	padding: 1.5em;
+	border: 5px solid #93e5c7;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.ga {
+	grid-column: 1/-1;
+	background-color: #93e5c7;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.early-bird {
+	grid-column: 1/-1;
+	background-color: #93e5c7;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.student {
+	grid-column: 1/-1;
+	background-color: #93e5c7;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.r-button {
+	text-align: center;
+	grid-column: 1/-1;
+}
+
+.map {
+	grid-column: 1/-1;
+}
+
+.address {
+	grid-column: 1/-1;
+	text-align: left;
+}
+
+/* schedule small */
+.s-container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: 1px;
+	width: 90%;
+	max-width: 500px;
+	padding: .5em 2em 2em 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#s-column1 {
+	grid-column: 1/2;
+
+}
+
+.slot9-10 {
+	grid-row: 3/4;
+	grid-column: 1/2;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+p.event1 {
+	grid-row: 3/4;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+
+
+.slot10-11 {
+	grid-row: 4/5;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 0px;
+}
+p.event2 {
+	grid-row: 4/5;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 0px;
+}
+
+.slot11-1230 {
+	grid-row: 5/6;
+	grid-column: 1/2;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+p.event3 {
+	grid-row: 5/6;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+
+.slot1230-2 {
+	grid-row: 6/7;
+	grid-column: 1/2;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 0px;
+}
+p.event4 {
+	grid-row: 6/7;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 0px;
+}
+
+.slot2-3 {
+	grid-row: 7/8;
+	grid-column: 1/2;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+p.event5 {
+	grid-row: 7/8;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+
+.slot3-5 {
+	grid-row: 8/9;
+	grid-column: 1/2;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 0px;
+}
+p.event6 {
+	grid-row: 8/9;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 0px;
+}
+
+.slot5-6 {
+	grid-row: 9/10;
+	grid-column: 1/2;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+p.event7 {
+	grid-row: 9/10;
+	background-color: #c7eadd;
+	padding: 10px;
+	margin: 0px;
+}
+
+.table-head {
+	margin-bottom: 5px;
+	padding-left: 10px;
+	background-color: #ffffff;
+}
+
+.sticky {
+	float: left;
+	position: -webkit-sticky;
+  position: sticky;
+  left: 0px;
+  width: 122px;
+}
+/* NOT DONE YET
+
+#s-column1 {
+	grid-column: 1/2;
+}
+
+#s-column2 {
+	grid-column: 2/3;
+}
+
+#s-column3 {
+	grid-column: 3/4;
+}
+
+#s-column4 {
+	grid-column: 4/5;
+}
+
+
+
+
+
+*/
+
+/* NAV BAR smaller screens */
+	.navbar li{
+	width: 50%;
+	border: .5px solid white;
+	}
+
+	#main{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    border:1px solid white;
+    border-top: .5px solid white;
+	}
+
+	.navbar li a {
+	padding: 5px 12px;
+	} 
+
+}

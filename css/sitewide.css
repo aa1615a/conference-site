@@ -1,0 +1,145 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/* 
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;		
+}
+*/
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+/* NAV BAR */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #93e5c7;
+}
+
+.navbar li {
+    float: right;
+    border-left:1px solid white;
+}
+
+.navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+#main{
+	float: left;
+    border-right:1px solid white;
+}
+
+.navbar li a:hover{
+    background-color: #c7eadd;
+}
+
+/*CONTENT */
+body {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #222;
+}
+
+/* wider screens */
+#logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    width: 40%;
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area. 
+	If you have more than one container, you are probably doing
+	something wrong. 	
+*/
+
+.banner{
+	background-image: url("../img/city-at-night.jpg");
+/* alternative cover 
+light-connector1.jpg 
+connector-cover.jpg
+*/
+	background-position: fixed;
+	background-size: cover;
+	min-height: 400px;
+}
+.container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+	padding: .5em;
+	background-color: #93e5c7;
+	/* border: 5px solid #93e5c7;*/
+	text-align: center;
+}
+
+/* smaller screens */
+@media (max-width: 490px) {
+	#logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 10px;
+    width: 55%;
+	}
+
+	.banner {
+	background-image: url("../img/city-at-night2.jpg");
+	/* alternate connector-cover2.jpg*/
+	background-position: fixed;
+	min-height: 300px;
+	}
+
+	.navbar li{
+	width: 50%;
+	border: .5px solid white;
+	}
+
+	#main{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    border:1px solid white;
+    border-top: .5px solid white;
+	}
+
+	.navbar li a {
+	padding: 5px 12px;
+	}
+
+	.container {
+
+	}
+
+}
